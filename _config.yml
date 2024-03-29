@@ -1,6 +1,5 @@
 title: wu-kan # 站点标题
 description: | # 头像背后的信息（html格式），<br/>代表换行
-  我的灵魂奏出绝响<br/>
   <a href="mailto:site@wu-kan.cn">
     <i class="fa-solid fa-envelope"></i>
   </a>
@@ -13,15 +12,16 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
   <a href="https://scholar.google.com/citations?user=aU9P37UAAAAJ">
     <i class="fa-brands fa-google-scholar"></i>
   </a>
+  <a href="https://vjudge.net/user/WuK">
+    <i class="fa-solid fa-smile"></i>
+  </a>
   <a href="https://space.bilibili.com/166390020">
     <i class="fa-brands fa-bilibili"></i>
   </a>
   <a href="https://www.zhihu.com/people/wukan0621">
     <i class="fa-brands fa-zhihu"></i>
   </a>
-  <a href="https://vjudge.net/user/WuK">
-    <i class="fa-solid fa-smile"></i>
-  </a>
+  我的灵魂奏出绝响<br/>
   <br/>
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
@@ -283,7 +283,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-web@1.320.0/lxgwwenkaimonotc-regular/result.min.css"
+                href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-web@1.320.0/lxgwwenkaimonotc-bold/result.min.css"
               />
               <style>
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
