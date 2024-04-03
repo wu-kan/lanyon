@@ -328,28 +328,30 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           title: # 为每个页面自动生成一个 H1 title
             enable: true
           prepend:
-            - | # 标题和引用前插一个图标
+            - | # 选中字体颜色
               <style>
+                ::selection {
+                  color: White;
+                  background: Black;
+                }
+              </style>
+            - | # 标题和引用前插一个标记
+              <style>
+                h1::before { content: "#"; }
+                h2::before { content: "##"; }
+                h3::before { content: "###"; }
+                h4::before { content: "####"; }
+                h5::before { content: "#####"; }
+                h6::before { content: "######"; }
+                blockquote::before { content: ">"; }
                 h1::before,
                 h2::before,
                 h3::before,
                 h4::before,
                 h5::before,
                 h6::before,
-                blockquote::before {
-                  font-family: "Font Awesome 6 Free";
-                  font-weight: bold;
-                  font-size: smaller;
+                blockquote::before { 
                   margin-right: .5rem;
-                  content: "\f292";
-                }
-                blockquote::before { content: "\f10d"; }
-              </style>
-            - | # 选中字体颜色
-              <style>
-                ::selection {
-                  color: White;
-                  background: Black;
                 }
               </style>
             - | # 调整标题样式
