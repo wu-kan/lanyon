@@ -1,7 +1,7 @@
 ---
 redirect_from: /_posts/2018-12-14-Windows-Subsystem-for-Linux/
 title: Windows Subsystem for Linux入门：安装+配置图形界面+中文环境+vscode
-tags: Linux
+tags: 超算竞赛
 ---
 
 ## 什么是 WSL
