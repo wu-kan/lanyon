@@ -1,8 +1,7 @@
 ---
 redirect_from: /_posts/2019-09-19-Futoshiki/
 title: Futoshiki
-tags:
-  - 人工智能
+tags: 课程实验与项目
 ---
 
 ## Problem Description

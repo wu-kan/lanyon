@@ -1,8 +1,7 @@
 ---
 redirect_from: /_posts/2019-11-28-Naive-Bayes/
 title: Naive Bayes
-tags:
-  - 人工智能
+tags: 课程实验与项目
 ---
 
 ## Naive Bayes

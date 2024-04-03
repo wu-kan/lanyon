@@ -1,8 +1,7 @@
 ---
 redirect_from: /_posts/2019-11-21-Planning-and-Uncertainty/
 title: Planning and Uncertainty
-tags:
-  - 人工智能
+tags: 课程实验与项目
 ---
 
 ## $2\times 2$ Rubik's Cube

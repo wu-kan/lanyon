@@ -1,8 +1,7 @@
 ---
 redirect_from: /_posts/2019-12-05-Expectation-Maximization/
 title: Expectation Maximization
-tags:
-  - 人工智能
+tags: 课程实验与项目
 ---
 
 ## Expectation Maximization
