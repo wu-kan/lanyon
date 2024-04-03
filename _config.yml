@@ -351,7 +351,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 h5::before,
                 h6::before,
                 blockquote::before { 
-                  margin-right: .5rem;
+                  margin-right: 1rem;
                 }
               </style>
             - | # 调整标题样式

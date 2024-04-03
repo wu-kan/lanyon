@@ -1,8 +1,7 @@
 ---
 redirect_from: /_posts/2019-12-04-Lab11-sklearn%E4%B8%AD%E7%9A%84SVM%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/
 title: Lab11 sklearn中的SVM应用实践
-tags:
-  - 机器学习
+tags: 课程实验与项目
 ---
 
 利用 scikit-learn 中自带的 iris 数据集，学习数据规范化、数据集切分、分类、预测，以及分类器 SVC 的测试评估等。

@@ -1,8 +1,7 @@
 ---
 redirect_from: /_posts/2019-11-04-Lab8-Navie-Bayes%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/
 title: Lab8 Navie Bayes应用实践
-tags:
-  - 机器学习
+tags: 课程实验与项目
 ---
 
 利用 python 的文本处理能力将文档切分成词，通过集合元素的唯一性生成词汇列 表（不包括重复词汇），进而构建词向量（词集向量或词袋向量），从词向量计算概率，然后 构建分类器对邮件文档进行垃圾邮件分类。代码文件：bayes.py

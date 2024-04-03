@@ -1,7 +1,7 @@
 ---
 redirect_from: /_posts/2019-02-06-%E9%85%8D%E7%BD%AETensorFlow/
 title: 配置TensorFlow
-tags: 机器学习
+tags: 课程实验与项目
 ---
 
 该补上的文章 🕊 了太久了…
