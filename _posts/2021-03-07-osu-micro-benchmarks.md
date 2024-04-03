@@ -1,8 +1,7 @@
 ---
 redirect_from: /_posts/2021-03-07-osu-micro-benchmarks/
 title: osu-micro-benchmarks
-tags:
-  - 高性能计算
+tags: 超算竞赛
 ---
 
 ## 引言
