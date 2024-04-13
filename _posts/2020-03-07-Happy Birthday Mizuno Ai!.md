@@ -1,7 +1,7 @@
 ---
 redirect_from: /_posts/2020-03-07-Happy-Birthday-Mizuno-Ai!/
 title: Happy Birthday Mizuno Ai!
-tags: 水野爱
+tags: 发癫
 ---
 
 誕生日おめでとう！出一波库存~

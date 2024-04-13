@@ -65,7 +65,7 @@ presentation: # https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/pr
   - UM 可以通过显式提示的方式减少页面错误
     - 仍然实现细粒度数据共享的流水线预取和计算
   - 不支持至少有一个 writer 和多个 reader 的页面复制
-    - 对有多个 reader 的页面的写将页面“折叠”到单个 GPU（通常是 writer）会触发昂贵的 TLB
+    - 对有多个 reader 的页面的写将页面「折叠」到单个 GPU（通常是 writer）会触发昂贵的 TLB
 
 <!-- .slide vertical=true -->
 

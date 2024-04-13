@@ -261,7 +261,7 @@ int main()
 
 ## Liz and the Blue Bird
 
-After a long thought, Liz made a tough decision. When the girl came back home from picking raspberries with delight. Liz said goodbye to the girl with smile. A basket of raspberries dropped, scattering on the floor. “You are ought to be free and use your lightsome wings to fly to everywhere you want.” “Why? I just want to stay with you forever. Only by your side can I taste the sweet of happiness.” “I am the cage that traps you. You have wings and vast sky to explore. I can't deprive you of your wings,” Liz opened the door, smiling mildly. “So just leave here and fly high. Please let me watch your beautiful figure go away,” Liz held out her hand, “That's the way I convey my feelings.” She paused and took a deep breath “I love you.” The girl sobbed, stepped slowly towards door. She looked back, with love, with unwillingness, and turned into a blue bird, flying away.
+After a long thought, Liz made a tough decision. When the girl came back home from picking raspberries with delight. Liz said goodbye to the girl with smile. A basket of raspberries dropped, scattering on the floor. 「You are ought to be free and use your lightsome wings to fly to everywhere you want.」 「Why? I just want to stay with you forever. Only by your side can I taste the sweet of happiness.」 「I am the cage that traps you. You have wings and vast sky to explore. I can't deprive you of your wings,」 Liz opened the door, smiling mildly. 「So just leave here and fly high. Please let me watch your beautiful figure go away,」 Liz held out her hand, 「That's the way I convey my feelings.」 She paused and took a deep breath 「I love you.」 The girl sobbed, stepped slowly towards door. She looked back, with love, with unwillingness, and turned into a blue bird, flying away.
 
 [![bluebird](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/11/11/WCUM8ndNwVtAl6h.jpg)](https://twitter.com/Lyytoaoitori/status/1073908097414946817)
 
@@ -472,7 +472,7 @@ For each case, output one integer, the minimum total weighted completion time of
 10
 ```
 
-对应的建图方式如下（图中边上的数据是“边长，容量”的格式，费用 = 边长 \* 流量），容易看出这张图的最小费用是 24，也是最后的答案。
+对应的建图方式如下（图中边上的数据是「边长，容量」的格式，费用 = 边长 \* 流量），容易看出这张图的最小费用是 24，也是最后的答案。
 
 ```mermaid
 flowchart LR

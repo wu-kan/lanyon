@@ -22,7 +22,11 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
     <i class="fa-brands fa-zhihu"></i>
   </a>
   <br/>
-  我的灵魂奏出绝响<br/>
+  水野爱、佐贺偶像是传奇、吹响吧！上低音号、Bon Jovi、FGO、以及我的黑柴犬吴豆豆
+  <br/>
+  「奏でろ 荒ぶる魂」
+  <br/>
+  “我的灵魂奏出绝响”
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
 defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/front-matter-defaults/>功能进行配置
@@ -181,10 +185,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     <span id="busuanzi_value_page_pv">
                       <i class="fa-solid fa-spinner fa-pulse"></i>
                     </span>
+                    <br/>
                     <i class="fa-solid fa-paw fa-fw"></i>
                     <span id="busuanzi_value_site_pv">
                       <i class="fa-solid fa-spinner fa-pulse"></i>
                     </span>
+                    <br/>
                     <i class="fa-solid fa-user-friends fa-fw"></i>
                     <span id="busuanzi_value_site_uv">
                       <i class="fa-solid fa-spinner fa-pulse"></i>
@@ -491,75 +497,24 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 ></script>
             - smart_include:
                 enable: false
-              append: | # 引入live2d看板娘！不需要可以把这一项都删掉
+              append: |
                 <link
                   rel="stylesheet"
-                  href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.css"
+                  href="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.css"
                 />
-                <style>
-                  @media only print {
-                    .pio-container {
-                      display: none;
-                    }
+                <div id="sakana-widget"></div>
+                <script>
+                  function initSakanaWidget() {
+                    const mizuno = SakanaWidget.getCharacter('chisato');
+                    mizuno.image = `https://mizuno-ai.wu-kan.cn/pixiv/75805052_p0.webp`;
+                    SakanaWidget.registerCharacter('mizuno', mizuno);
+                    new SakanaWidget({ character: 'mizuno' }).mount('#sakana-widget');
                   }
-                </style>
+                </script>
                 <script
-                  async="async"
-                  src="https://cdn.jsdelivr.net/combine/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js,gh/Dreamer-Paul/Pio@2.4/static/pio.min.js"
-                  onload='
-                    let pio_container = document.createElement("div");
-                    pio_container.classList.add("pio-container");
-                    pio_container.classList.add("right");
-                    pio_container.style.bottom = "-2rem";
-                    pio_container.style.zIndex = "1";
-                    document.body.insertAdjacentElement("beforeend", pio_container);
-                    let pio_action = document.createElement("div");
-                    pio_action.classList.add("pio-action");
-                    pio_container.insertAdjacentElement("beforeend", pio_action);
-                    let pio_canvas = document.createElement("canvas");
-                    pio_canvas.id = "pio";
-                    pio_canvas.style.width = "14rem";
-                    pio_canvas.width = "600";
-                    pio_canvas.height = "800";
-                    pio_container.insertAdjacentElement("beforeend", pio_canvas);
-                    let pio = new Paul_Pio({
-                      "mode": "fixed",
-                      "hidden": true,
-                      "night": "for(let i=7; i<16; ++i) if(document.body.classList.contains(`theme-base-0`+i.toString(16))) { document.body.classList.remove(`theme-base-0`+i.toString(16)); document.body.classList.add(`theme-base-0`+((i-6)%9+7).toString(16)); break; }",
-                      "content": {
-                        "link": ["https:\/\/jekyll-theme-WuK.wu-kan.cn"],
-                        "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
-                        "hidden": true,
-                        "custom": [{
-                          "selector": "a",
-                          "type": "link",
-                        }, {
-                          "selector": ".sidebar-toggle",
-                          "text": "打开侧边栏叭~"
-                        }, {
-                          "selector": ".effect-info",
-                          "text": "哇，你发现了什么！"
-                        }, {
-                          "selector": "#sidebar-search-input",
-                          "text": "想搜索什么呢？很多干货哦！"
-                        }, {
-                          "selector": "#toc",
-                          "text": "这是目录~"
-                        }, {
-                          "selector": ".page-title",
-                          "text": "这是标题~"
-                        }]
-                      },
-                      "model": [
-                        "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
-                        "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
-                        "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/xiaomai/xiaomai.model.json",
-                        "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
-                        "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
-                        "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
-                        "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
-                        "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"]
-                    });'
+                  async
+                  onload="initSakanaWidget()"
+                  src="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.js"
                 ></script>
         post:
           date: # 显示博文时间
@@ -652,7 +607,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append: |
             <script
               async="async"
-              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.0.5/dist/reveal.min.js,npm/reveal.js@5.0.5/plugin/markdown/markdown.min.js,npm/reveal.js@5.0.5/plugin/math/math.min.js"
+              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.0.5/dist/reveal.min.js,npm/reveal.js@5.0.5/plugin/markdown/markdown.min.js,npm/reveal.js@5.0.5/plugin/math/math.min.js,npm/reveald3@2.0.0/reveald3.min.js,npm/reveal.js-mermaid-plugin@2.3.0/plugin/mermaid/mermaid.min.js"
               onload="
               for(let x of document.getElementsByClassName('wrap'))
                 x.classList.add('reveal');
@@ -661,7 +616,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 height: '100%',
                 mouseWheel: true,
                 navigationMode: 'linear',
-                plugins: [ RevealMarkdown,RevealMath.KaTeX ]
+                plugins: [ RevealMarkdown,RevealMath.KaTeX,Reveald3,RevealMermaid ]
               });
             "></script>
 
