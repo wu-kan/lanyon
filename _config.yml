@@ -499,22 +499,27 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 enable: false
               append: |
                 <link
-                  rel="stylesheet"
-                  href="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.css"
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.css"
                 />
-                <div id="sakana-widget"></div>
                 <script>
-                  function initSakanaWidget() {
-                    const mizuno = SakanaWidget.getCharacter('chisato');
-                    mizuno.image = `https://mizuno-ai.wu-kan.cn/pixiv/75805052_p0.webp`;
-                    SakanaWidget.registerCharacter('mizuno', mizuno);
-                    new SakanaWidget({ character: 'mizuno' }).mount('#sakana-widget');
-                  }
+                function initSakanaWidget() {
+                  const mizuno = SakanaWidget.getCharacter('takina');
+                  mizuno.image = `https://mizuno-ai.wu-kan.cn/pixiv/75805052_p0.webp`;
+                  SakanaWidget.registerCharacter('mizuno', mizuno);
+                  let sakana = document.createElement("div");
+                  sakana.style.bottom = "0";
+                  sakana.style.right = "0";
+                  sakana.style.zIndex = "1";
+                  sakana.style.position = "fixed";
+                  document.body.insertAdjacentElement("beforeend", sakana);
+                  new SakanaWidget({ character: 'mizuno' }).mount(sakana);
+                }
                 </script>
                 <script
-                  async
-                  onload="initSakanaWidget()"
-                  src="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.js"
+                async
+                onload="initSakanaWidget()"
+                src="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.js"
                 ></script>
         post:
           date: # 显示博文时间
