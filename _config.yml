@@ -197,8 +197,8 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     </span>
                   </div>
                   <script
-                    src='https://cdn.jsdelivr.net/npm/busuanzi@2.3/bsz.pure.mini.js'
-                    async='async'
+                    src="https://cdn.jsdelivr.net/npm/busuanzi@2.3/bsz.pure.mini.js"
+                    async="async"
                   ></script>
                 </div>
               - | # 觉得我的主题好用的话，让更多的人知道它吧！
@@ -282,7 +282,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 }
               </style>
-            - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
+            - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案；<https://unicode-range.ooooo.page/> 解析字体的 Unicode Range
               <style>
                 @font-face {
                   font-family: "WuK Serif Mono";
@@ -292,13 +292,13 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 @font-face {
                   font-family: "WuK Serif Mono";
                   font-display: swap;
-                  unicode-range: U+3001,U+3002,U+ff0c;
+                  unicode-range: U+3001,U+3002,U+FF0C,U+FF1A;
                   src: url("https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@5.0.11/files/noto-serif-tc-119-400-normal.woff2") format("woff2");
                 }
                 @font-face {
                   font-family: "WuK Serif Mono";
                   font-display: swap;
-                  unicode-range: U+0000-007F;
+                  unicode-range: U+0020-007E, U+00A1-0128, U+012A-0148, U+014A-017E, U+018F, U+0192, U+019D, U+01E6-01E7, U+01EA-01EB, U+01FC-01FF, U+0218-021B, U+0232-0233, U+0237, U+0259, U+0272, U+02C6-02C7, U+02D8-02DD, U+0300-0304, U+0306-0308, U+030A-030C, U+0323, U+0326-0328, U+03A9, U+1E80-1E85, U+1E9E, U+1EA0, U+1EB8-1EB9, U+1EBC-1EBD, U+1ECA-1ECD, U+1EE4-1EE5, U+1EF2-1EF3, U+1EF8-1EF9, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2023, U+2026, U+2030, U+2039-203A, U+2044, U+2070, U+2074-2079, U+2080-2089, U+20A1, U+20A9, U+20AC, U+20B1, U+20BA, U+20BD, U+20BF, U+2113, U+2116, U+2122-2123, U+2153-2154, U+215B-215E, U+2190-2199, U+21A9-21AA, U+21BA-21BB, U+21C4, U+21C6, U+2200, U+2202-2203, U+2206-2208, U+220F-2212, U+221A, U+221E, U+2220, U+2227-2228, U+222B, U+2234, U+2237, U+2248, U+2260-2261, U+2264-2265, U+2282, U+2295, U+25B2, U+25B4, U+25B6, U+25B8, U+25BC, U+25BE, U+25C0, U+25C2, U+25CA, U+2B0E-2B11;
                   src: url("https://cdn.jsdelivr.net/npm/monaspace-font@0.0.2/files/MonaspaceXenonVarVF[wght,wdth,slnt].woff2") format("woff2");
                 }
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
