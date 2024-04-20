@@ -283,13 +283,25 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
             - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaspace-font@0.0.2/xenon.min.css" />
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@5.0.11/300.min.css" />
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@5.0.11/chinese-simplified-300.min.css" />
               <style>
+                @font-face {
+                  font-family: "WuK Serif Mono";
+                  font-display: swap;
+                  src: url("https://cdn.jsdelivr.net/npm/clear-han-serif-subset@1.7.0/woff2/clearhanserif.subset.v1.07.gb2312.woff2") format("woff2");
+                }
+                @font-face {
+                  font-family: "WuK Serif Mono";
+                  font-display: swap;
+                  unicode-range: U+3001,U+3002,U+ff0c;
+                  src: url("https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@5.0.11/files/noto-serif-tc-119-400-normal.woff2") format("woff2");
+                }
+                @font-face {
+                  font-family: "WuK Serif Mono";
+                  font-display: swap;
+                  src: url("https://cdn.jsdelivr.net/npm/monaspace-font@0.0.2/files/MonaspaceXenonVarVF[wght,wdth,slnt].woff2") format("woff2");
+                }
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
-                  font-family: "Monaspace Xenon", "Courier New", "Courier", "Noto Sans Mono", "Noto Serif TC", "Noto Serif SC", "Noto Serif CJK TC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STZhongsong, STSong, "Songti SC", "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
-                  font-weight: 200;
+                  font-family: "WuK Serif Mono", "Noto Sans Mono", "Courier New", "Courier", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
                 }
               </style>
             - | # 修复行内图片默认样式
@@ -343,20 +355,8 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               </style>
             - | # 标题和引用前插一个标记
               <style>
-                h1::before { content: "#"; }
-                h2::before { content: "##"; }
-                h3::before { content: "###"; }
-                h4::before { content: "####"; }
-                h5::before { content: "#####"; }
-                h6::before { content: "######"; }
-                blockquote::before { content: ">"; }
-                h1::before,
-                h2::before,
-                h3::before,
-                h4::before,
-                h5::before,
-                h6::before,
-                blockquote::before { 
+                blockquote::before {
+                  content: ">";
                   margin-right: 1rem;
                 }
               </style>
@@ -364,6 +364,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               <style>
                 h1, h2, h3, h4, h5, h6 {
                   margin: 2rem 0rem 1.5rem 0rem;
+                  border-bottom: 1px solid Black; 
                 }
               </style>
             - | # 表格样式美化
