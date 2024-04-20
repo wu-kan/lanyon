@@ -298,6 +298,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 @font-face {
                   font-family: "WuK Serif Mono";
                   font-display: swap;
+                  unicode-range: U+0000-007F;
                   src: url("https://cdn.jsdelivr.net/npm/monaspace-font@0.0.2/files/MonaspaceXenonVarVF[wght,wdth,slnt].woff2") format("woff2");
                 }
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
