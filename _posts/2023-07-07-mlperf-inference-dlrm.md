@@ -2,14 +2,16 @@
 title: "运行 mlperf-inference v3.0 的 dlrm 多卡测试"
 ---
 
-尝试跑了一下 mlperf，发现文档写的有亿点点烂，并在上面花费了几天跑通多卡，以下记录一下最佳实践。
+尝试跑了一下 mlperf，发现文档写的有亿点点烂，仿佛所有提交结果的厂商都不打算让别人跑通他们的代码。
+
+在上面花费了几天跑起来多卡，以下记录一下最佳实践。
 
 clone 源码。
 
 ```shell
 mkdir -p $HOME/mlcommons
 cd $HOME/mlcommons
-git clone --recurse-submodules --depth=1 https://github.com/mlcommons/training.git
+git clone --recurse-submodules -b v4.0 --depth=1 https://github.com/mlcommons/training.git
 git clone --recurse-submodules -b v3.0 --depth=1 https://github.com/mlcommons/inference.git
 ```
 
