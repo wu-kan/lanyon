@@ -1,5 +1,6 @@
 ---
 title: 用 scipy 求解 The Diet Problem
+tags: 学习笔记与作业
 ---
 
 > Formulate the following [Diet Problem](https://ftp.mcs.anl.gov/pub/tech_reports/reports/P602.pdf). Transform the formulation into LP standard form. Use some LP solver to solve the problem. Try to find the dual of the problem (optional). Suppose that we have three foods and two nutritional requirements to satisfy:

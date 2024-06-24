@@ -1,5 +1,6 @@
 ---
 title: Automated Network Management
+tags: 学习笔记与作业
 ---
 
 > 作业内容：

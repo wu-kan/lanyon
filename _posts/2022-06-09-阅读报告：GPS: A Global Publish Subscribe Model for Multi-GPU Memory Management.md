@@ -2,6 +2,7 @@
 title: "阅读报告：GPS: A Global Publish Subscribe Model for Multi-GPU Memory Management"
 tags:
   - 论文阅读
+  - 学习笔记与作业
 ---
 
 > 阅读国际会议 ASPLOS、 USENIX 系列会议、PPoPP、或 IEEE、SC 等近三年发表的一篇正式科研论文（正式论文一般是英文双栏，大于 10 页），并撰写阅读报告（约 5-8 页左右，小四字体、单倍行距，若图片较多，可增加页数），报告内容包括：
