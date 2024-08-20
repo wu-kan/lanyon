@@ -283,7 +283,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
             - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaspace-font@0.0.2/xenon.min.css" />
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-xenon@5.0.1/index.min.css" />
               <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cn-fontsource-yat-xenon-serif-mono-regular/font.min.css" />
               <style>
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
