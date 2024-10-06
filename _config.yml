@@ -637,7 +637,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             </style>
           append: |
             <script
-              async="async"
               src="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.1.0/dist/reveal.min.js,npm/reveal.js@5.1.0/plugin/markdown/markdown.min.js,npm/reveal.js@5.1.0/plugin/math/math.min.js,npm/reveald3@2.0.0/reveald3.min.js,npm/reveal.js-mermaid-plugin@2.3.0/plugin/mermaid/mermaid.min.js"
               onload="
               for(let x of document.getElementsByClassName('wrap'))
