@@ -117,7 +117,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     overflow: auto auto;
                   }
                 </style>
-            append_to_sidebar:
+            prepend_to_sidebar:
               #- <script defer="defer" src="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/js/script.min.js"></script> # 点击空白处而非按钮从而关闭侧边栏的插件，可选
               - | # 侧边栏使用主题色
                 <style>
@@ -178,6 +178,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     transform: rotate3d(0, 1, 0, -180deg);
                   }
                 </style>
+            append_to_sidebar:
               - | # 不蒜子页面统计，看不懂可不改
                 <div>
                   <div>
@@ -229,6 +230,51 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   --theme-base-color: DarkSlateBlue;
                 }
               </style>
+            - | # 页面加载动画，可在 <https://css-loaders.com/> 挑选
+              <style>
+              .loader-wrapper {
+                width: 100vw;
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: white;
+                z-index: 999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              .loader {
+                width: calc(6*30px);
+                height: 50px;
+                display: flex;
+                color: var(--theme-base-color);
+                filter: drop-shadow(30px 25px 0 currentColor) drop-shadow(60px 0 0 currentColor) drop-shadow(120px 0 0 currentColor);
+                clip-path: inset(0 100% 0 0);
+                animation: l12 2s infinite steps(7);
+              }
+              .loader:before {
+                content: "";
+                width: 30px;
+                height: 25px;
+                --c:no-repeat radial-gradient(farthest-side,currentColor 92%,#0000);
+                background: 
+                  var(--c) left /70% 70%,
+                  var(--c) right/20% 20%,
+                  var(--c) top    0 right 15%/20% 20%,
+                  var(--c) bottom 0 right 15%/20% 20%;
+              }
+              @keyframes l12 {
+                100% {clip-path: inset(0 -30px 0 0)}
+              }
+              </style>
+              <script>
+                document.addEventListener("DOMContentLoaded", (event) => {
+                  for(let x of document.getElementsByClassName("loader-wrapper")) {
+                    x.remove();
+                  }
+              });
+              </script>
             - | # 一些页面优化标签，看不懂可跳过
               <meta
                 name="viewport"
@@ -262,7 +308,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # fontawesome图标；标题和引用之前插一个图标
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css"
               />
             - | # 侧边栏放缩修正
               <style>
@@ -283,7 +329,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
             - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-xenon@5.0.1/index.min.css" />
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-xenon@5.1.0/index.min.css" />
               <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cn-fontsource-yat-xenon-serif-mono-regular/font.min.css" />
               <style>
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
@@ -408,7 +454,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 | # 对KaTeX过长公式渲染超出页面的修正，感谢[@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/13)
                 <link
                   rel="stylesheet"
-                  href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css"
+                  href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
                 />
                 <style>
                   .katex-display>.katex {
@@ -416,7 +462,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/combine/npm/katex@0.16.10/dist/katex.min.js,npm/katex@0.16.10/dist/contrib/auto-render.min.js"
+                  src="https://cdn.jsdelivr.net/combine/npm/katex@0.16.11/dist/katex.min.js,npm/katex@0.16.11/dist/contrib/auto-render.min.js"
                   async="async"
                   onload='renderMathInElement(document.body, { delimiters: [{left: "$$", right: "$$", display: true}, { left: "$", right: "$", display: false }, {left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}]})'
                 ></script>
@@ -431,7 +477,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/combine/npm/vega@5.29.0,npm/vega-lite@5.18.1,npm/vega-embed@6.25.0"
+                  src="https://cdn.jsdelivr.net/combine/npm/vega@5.30.0,npm/vega-lite@5.21.0,npm/vega-embed@6.26.0"
                   async="async"
                   onload='
                     for(let x of document.getElementsByClassName("language-vega-lite"))
@@ -463,7 +509,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"
+                  src="https://cdn.jsdelivr.net/npm/mermaid@11.3.0/dist/mermaid.min.js"
                   async="async"
                   onload='
                     for(let x of document.getElementsByClassName("language-mermaid"))
@@ -625,7 +671,7 @@ plugins: # <https://jekyllrb.com/docs/plugins/>
   - jekyll-redirect-from # 站点页面重定向
   - jekyll-remote-theme # 使用remote_theme插件实现主题的前后分离，详见<https://github.com/benbalter/jekyll-remote-theme/>
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@4.2.1 #使用固定版本号以防止主题更新导致站点显示错乱
+remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@4.3.0 #使用固定版本号以防止主题更新导致站点显示错乱
 
 readme_index: # 缺失index.md和index.html时，使用README.md代替之
   with_frontmatter: true # 支持带有yaml头的README
