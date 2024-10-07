@@ -233,9 +233,9 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # 页面加载动画，可在 <https://css-loaders.com/> 挑选
               <style>
               .loader-wrapper {
-                width: 100vw;
-                height: 100vh;
-                position: absolute;
+                width: 100%;
+                height: 100%;
+                position: fixed;
                 top: 0;
                 left: 0;
                 background-color: white;
