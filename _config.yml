@@ -328,14 +328,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 }
               </style>
-            - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-xenon@5.1.0/index.min.css" />
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cn-fontsource-yat-xenon-serif-mono-regular/font.min.css" />
-              <style>
-                .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
-                  font-family: "Monaspace Xenon", "Yat-Xenon-Serif-Mono", "Courier New", "Courier", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
-                }
-              </style>
             - | # 修复行内图片默认样式
               <style>
                 img {
@@ -547,6 +539,16 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 onload="initSakanaWidget()"
                 src="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.js"
                 ></script>
+            - smart_include:
+                enable: false
+              append: | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-xenon@5.1.0/index.min.css" />
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cn-fontsource-yat-xenon-serif-mono-regular@0.1.0/font.min.css" />
+                <style>
+                  .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
+                    font-family: "Monaspace Xenon", "Yat-Xenon-Serif-Mono", "Courier New", "Courier", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
+                  }
+                </style>
         post:
           date: # 显示博文时间
             enable: true
