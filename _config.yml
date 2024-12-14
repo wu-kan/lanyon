@@ -27,7 +27,7 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
   「奏でろ 荒ぶる魂」
   <br/>
   “我的灵魂奏出绝响”
-baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
+baseurl: "https://lthblog.github.io" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
 defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/front-matter-defaults/>功能进行配置
   - scope:
