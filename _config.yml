@@ -220,10 +220,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               kilo: 千
               unit: 字
           append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
-            - | # jsdelivr 防挂脚本（已注释，挂了再去掉），来自 https://github.com/PipecraftNet/jsdelivr-auto-fallback/blob/0.2.2/index.min.js
-              <script>
-                // (n=>{"use strict";let r,s,e;const l=["cdn.jsdelivr.net","fastly.jsdelivr.net","gcore.jsdelivr.net","cdn.zenless.top","testingcf.jsdelivr.net","test1.jsdelivr.net"],t="//",a=l[0],i=Date.now(),o=2e3,c="jsdelivr-auto-fallback",f="/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?",d=e=>e&&e.includes(t+a),m=e=>e.replace(t+a,t+r),u=window.setTimeout,v=n.querySelectorAll.bind(n),g=()=>{let e,t;for(e of v('link[rel="stylesheet"]'))t=e.href,d(t)&&!t.includes(f)&&(e.href=m(t));for(e of v("script"))if(t=e.src,d(t)){const r=n.createElement("script");r.src=m(t),e.defer=!0,e.src="",e.before(r),e.remove()}for(e of v("img"))t=e.src,d(t)&&(e.src="",e.src=m(t));for(e of v("*[style]"))t=e.getAttribute("style"),d(t)&&e.setAttribute("style",m(t));for(e of v("style"))t=e.innerHTML,d(t)&&(e.innerHTML=m(t))},y=()=>{!e&&s&&r&&(console.warn(a+" is not available. Use "+r),e=!0,u(g,0),u(g,20),setInterval(g,500))},b=(()=>{try{return Object.assign({},JSON.parse(localStorage.getItem(c)||"{}"))}catch{return{}}})();var h=()=>{b.time=i,b.failed=!1,b.fastNode=null;for(const t of l)((e,t)=>{let r;const s=n.createElement("link"),l=e=>{r&&(clearTimeout(r),r=0,e||(s.href="data:text/plain;base64,"),s.remove(),t(e))};r=u(l,o),s.addEventListener("error",()=>l(!1)),s.addEventListener("load",()=>l(!0)),s.rel="stylesheet",s.text="text/css",s.href=e+f+i,n.head.insertAdjacentElement("afterbegin",s)})("https://"+t,e=>{e||t!==a||(s=!0,b.failed=!0),e&&!r&&(r=t),e&&!b.fastNode&&(b.fastNode=t),y()});u(()=>{s&&!r&&(r=l[1],y()),localStorage.setItem(c,JSON.stringify(b))},o+100)};b.time&&i-b.time<36e5&&b.failed&&b.fastNode?(s=!0,r=b.fastNode,y(),u(h,1e3)):h()})(document);
-              </script>
             - | # 自定义主题色（水野爱蓝），可对应 <https://www.runoob.com/cssref/css-colornames.html> 挑选
               <style>
                 .theme-base-07 {
@@ -300,10 +296,15 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 icon"
                 href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=32"
               />
+            - | # 来自primer/css的页面样式，不要改
+              <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/@primer/css@21.5.1/dist/primer.min.css"
+              />
             - | # 来自lanyon的页面样式，不要改
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@v1.1.0/public/css/poole.min.css,gh/poole/lanyon@v1.1.0/public/css/lanyon.min.css,gh/poole/lanyon@v1.1.0/public/css/syntax.min.css"
+                href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@v1.1.0/public/css/lanyon.min.css,gh/poole/lanyon@v1.1.0/public/css/syntax.min.css"
               />
             - | # fontawesome图标；标题和引用之前插一个图标
               <link
@@ -326,13 +327,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
                     transform: translateX(0);
                   }
-                }
-              </style>
-            - | # 修复行内图片默认样式
-              <style>
-                img {
-                  display: inline-block;
-                  margin: 0;
                 }
               </style>
             - | # 自定义滚动条，仅对Chrome系浏览器生效
@@ -359,13 +353,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 }
               </style>
-            - | # 链接样式修正
-              <style>
-                .container a,
-                .related-posts li a:hover {
-                  color: var(--theme-base-color);
-                }
-              </style>
             - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
               <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-xenon@5.1.0/index.min.css" />
               <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/jyhpws/dist/%E6%9E%81%E5%BD%B1%E6%AF%81%E7%89%87%E6%96%87%E5%AE%8B/result.css' />
@@ -383,40 +370,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 ::selection {
                   color: White;
                   background: Black;
-                }
-              </style>
-            - | # 调整标题样式
-              <style>
-                h1, h2, h3, h4, h5, h6 {
-                  margin: 2rem 0rem 1.5rem 0rem;
-                  border-bottom: 1px solid Black; 
-                }
-              </style>
-            - | # 表格样式美化
-              <style>
-                td,
-                th {
-                  padding: 0px;
-                  border: 0px;
-                }
-                table {
-                  border: 0px;
-                }
-                table tbody {
-                  display: block;
-                  overflow: scroll;
-                }
-                table thead,
-                tbody tr {
-                  display: table;
-                  table-layout: fixed;
-                  width: 100%;
-                }
-              </style>
-            - | # 列表项增加行距
-              <style>
-                .content li {
-                  margin: .25rem;
                 }
               </style>
             - | # 首行缩进2字符
@@ -670,7 +623,7 @@ plugins: # <https://jekyllrb.com/docs/plugins/>
   - jekyll-redirect-from # 站点页面重定向
   - jekyll-remote-theme # 使用remote_theme插件实现主题的前后分离，详见<https://github.com/benbalter/jekyll-remote-theme/>
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@4.3.0 #使用固定版本号以防止主题更新导致站点显示错乱
+remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@4.4.0 #使用固定版本号以防止主题更新导致站点显示错乱
 
 readme_index: # 缺失index.md和index.html时，使用README.md代替之
   with_frontmatter: true # 支持带有yaml头的README
@@ -692,7 +645,7 @@ kramdown: # 见<https://kramdown.gettalong.org/options.html>
   syntax_highlighter_opts: # 可见<https://kramdown.gettalong.org/syntax_highlighter/rouge.html>
     block:
       disable: false
-      line_numbers: false #渲染出来的效果好鬼畜
+      line_numbers: true #渲染出来的效果好鬼畜
     span:
       disable: false
 
