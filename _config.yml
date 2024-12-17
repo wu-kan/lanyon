@@ -344,7 +344,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 @media only screen {
                   pre {
                     white-space: pre;
-                    max-height: 66.6vh;
                     padding: 0 1rem;
                     overflow: hidden hidden;
                   }
@@ -353,7 +352,8 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 }
                 .markdown-body .highlight pre, .markdown-body pre {
-                  padding: none;
+                  padding: 0;
+                  background: none;
                 }
               </style>
             - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
