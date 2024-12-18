@@ -85,7 +85,7 @@ The CIFAR-10 dataset (<http://www.cs.toronto.edu/~kriz/cifar.html>) consists of 
 
 The dataset is divided into five training batches and one test batch, each with 10000 images. The test batch contains exactly 1000 randomly-selected images from each class. The training batches contain the remaining images in random order, but some training batches may contain more images from one class than another. Between them, the training batches contain exactly 5000 images from each class. Here are the classes in the dataset, as well as 10 random images from each:
 
-![cifar10](https://img-blog.csdnimg.cn/20190730170546931.png)
+![cifar10](https://Mizuno-Ai.wu-kan.cn/assets/image/img-blog.csdnimg.cn/20190730170546931.png)
 
 The classes are completely mutually exclusive. There is no overlap between automobiles and trucks. "Automobile" includes sedans, SUVs, things of that sort. "Truck" includes only big trucks. Neither includes pickup trucks.
 

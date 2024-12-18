@@ -70,7 +70,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 width: calc(6*30px);
                 height: 50px;
                 display: flex;
-                color: var(--theme-base-color);
+                color: Black;
                 filter: drop-shadow(30px 25px 0 currentColor) drop-shadow(60px 0 0 currentColor) drop-shadow(120px 0 0 currentColor);
                 clip-path: inset(0 100% 0 0);
                 animation: l12 2s infinite steps(7);
