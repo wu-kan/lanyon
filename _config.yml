@@ -355,7 +355,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               href="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.1.0/dist/reveal.min.css,npm/reveal.js@5.1.0/dist/theme/serif.min.css"
             />
             <style>
-              .reveal .slides {
+              .reveal {
                 --r-main-font: var(--fontStack-monospace);
                 --r-heading-font: var(--fontStack-monospace);
                 --r-code-font: var(--fontStack-monospace);
