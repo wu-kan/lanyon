@@ -592,14 +592,19 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - key: data-separator-vertical # 垂直展示页分隔符
               value: <!-- .slide vertical=true -->
           prepend: |
+            <link
+              rel="stylesheet"
+              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.1.0/dist/reveal.min.css,npm/reveal.js@5.1.0/dist/theme/serif.min.css"
+            />
             <style>
-              :root {
-                --r-main-font: var(--fontStack-monospace) !important;
-                --r-heading-font: var(--fontStack-monospace) !important;
-                --r-code-font: var(--fontStack-monospace) !important;
-                --r-main-color: var(--fgColor-default, var(--color-fg-default)) !important;
-                --r-heading-color: var(--fgColor-default, var(--color-fg-default)) !important;
-                --r-background-color: var(--bgColor-default, var(--color-canvas-default)) !important;
+              .wrap {
+                --r-main-font: var(--fontStack-monospace);
+                --r-heading-font: var(--fontStack-monospace);
+                --r-code-font: var(--fontStack-monospace);
+                --r-main-color: var(--fgColor-default, var(--color-fg-default));
+                --r-heading-color: var(--fgColor-default, var(--color-fg-default));
+                --r-link-color: var(--fgColor-accent, var(--color-accent-fg));
+                --r-background-color: var(--bgColor-default, var(--color-canvas-default));
               }
               .reveal .slides {
                 text-align: left;
@@ -608,10 +613,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 line-height: 1.5;
               }
             </style>
-            <link
-              rel="stylesheet"
-              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.1.0/dist/reveal.min.css,npm/reveal.js@5.1.0/dist/theme/serif.min.css"
-            />
           append: |
             <script
               src="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.1.0/dist/reveal.min.js,npm/reveal.js@5.1.0/plugin/markdown/markdown.min.js,npm/reveal.js@5.1.0/plugin/math/math.min.js,npm/reveald3@2.0.0/reveald3.min.js,npm/reveal.js-mermaid-plugin@2.3.0/plugin/mermaid/mermaid.min.js"
