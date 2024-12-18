@@ -144,10 +144,11 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   font-family: var(--fontStack-monospace);
                 }
               </style>
-            - | # 代码块高亮，异步加载，防止访问 GitHub 阻塞页面加载
+            - | # 代码块高亮，异步加载，防止 GitHub 阻塞页面加载
               <link
                 rel="preload"
                 as="style"
+                async="async"
                 onload="this.rel='stylesheet'"
                 href="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/css/syntax.min.css"
               />
