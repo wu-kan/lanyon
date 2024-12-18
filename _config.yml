@@ -1,32 +1,6 @@
-title: wu-kan # 站点标题
+title: 星合の空 # 站点标题
 description: | # 头像背后的信息（html格式），<br/>代表换行
-  <a href="mailto:site@wu-kan.cn">
-    <i class="fa-solid fa-envelope"></i>
-  </a>
-  <a href="https://github.com/wu-kan">
-    <i class="fa-brands fa-github"></i>
-  </a>
-  <a href="https://scholar.google.com/citations?user=aU9P37UAAAAJ">
-    <i class="fa-brands fa-google-scholar"></i>
-  </a>
-  <a href="https://orcid.org/0009-0008-5828-847X">
-    <i class="fa-brands fa-orcid"></i>
-  </a>
-  <a href="https://vjudge.net/user/WuK">
-    <i class="fa-solid fa-smile"></i>
-  </a>
-  <a href="https://space.bilibili.com/166390020">
-    <i class="fa-brands fa-bilibili"></i>
-  </a>
-  <a href="https://www.zhihu.com/people/wukan0621">
-    <i class="fa-brands fa-zhihu"></i>
-  </a>
-  <br/>
-  水野爱、佐贺偶像是传奇、吹响吧！上低音号、FGO、以及我的黑柴犬吴豆豆
-  <br/>
-  「奏でろ 荒ぶる魂」
-  <br/>
-  “我的灵魂奏出绝响”
+  Kan Wu's Personal Blog
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
 defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/front-matter-defaults/>功能进行配置
@@ -45,10 +19,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               async="async"
             ></script>
         default:
-          body:
-            theme-base: theme-base-07 # 可选的主题色包括08~0f，见 <https://github.com/poole/lanyon>
-            layout-reverse: true # 开启后sidebar在右边，反之左边
-            sidebar-overlay: true # 开启后正文不随sidebar移动而移动
           html_lang: zh # <https://www.w3school.com.cn/tags/html_ref_language_codes.asp>
           menu:
             nav: # 导航部分的内容，你也可以自己增加文字、图标（来自fontawesome）和对应的链接
@@ -76,25 +46,13 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 href: https://scholar.google.com/citations?user=aU9P37UAAAAJ
               - title: Vjudge
                 href: https://vjudge.net/user/WuK
+              - title: jekyll-theme-WuK
+                href: https://jekyll-theme-WuK.wu-kan.cn
             footer: |
               <div>
-                <i class="fa-solid fa-thumbs-up fa-fw"></i>
-                <a href="https://jekyll-theme-WuK.wu-kan.cn">
-                  jekyll-theme-WuK
-                </a>
-              </div>
-              <br/>
-              <div>
-                <i class="fa-solid fa-copyright fa-fw"></i>
-                2017-2024 WuK
+                ©2017-2024 WuK
               </div>              
           append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
-            - | # 自定义主题色（水野爱蓝），可对应 <https://www.runoob.com/cssref/css-colornames.html> 挑选
-              <style>
-                .theme-base-07 {
-                  --theme-base-color: DarkSlateBlue;
-                }
-              </style>
             - | # 页面加载动画，可在 <https://css-loaders.com/> 挑选
               <style>
               .loader-wrapper {
@@ -177,58 +135,16 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 rel="stylesheet"
                 href="https://cdn.jsdelivr.net/npm/@primer/css@21.5.1/dist/primer.min.css"
               />
-            - |
-              <style>
-                .markdown-body h1,
-                .markdown-body h2,
-                .markdown-body h3,
-                .markdown-body h4,
-                .markdown-body h5,
-                .markdown-body h6 {
-                  color: var(--fgColor-default, var(--color-fg-default));
-                }
-              </style>
-            - |
-              <link
-                rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css"
-              />
             - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
               <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-xenon@5.1.0/index.min.css" />
               <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/jyhpws/dist/%E6%9E%81%E5%BD%B1%E6%AF%81%E7%89%87%E6%96%87%E5%AE%8B/result.css' />
+              <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/maple-mono-cn/dist/MapleMono-CN-Regular/result.css' />
               <style>
                 :root {
-                  --fontStack-monospace: "Monaspace Xenon", "极影毁片文宋 Medium", "Courier New", "Courier", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
+                  --fontStack-monospace: 'Maple Mono CN', "Monaspace Xenon", "极影毁片文宋 Medium", "Courier New", "Courier", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
                 }
-                .markdown-body, .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
+                .markdown-body {
                   font-family: var(--fontStack-monospace);
-                }
-              </style>
-            - | # 自定义滚动条，仅对Chrome系浏览器生效
-              <style>
-                ::-webkit-scrollbar {
-                  width: 3px;
-                  height: 3px;
-                }
-                ::-webkit-scrollbar-thumb {
-                  background-color: Gray;
-                }
-              </style>
-            - | # 防止代码块过长
-              <style>
-                @media only screen {
-                  pre {
-                    white-space: pre;
-                    padding: 0 1rem;
-                    overflow: hidden hidden;
-                  }
-                  pre:hover {
-                    overflow: auto auto;
-                  }
-                }
-                .markdown-body .highlight pre, .markdown-body pre {
-                  padding: 0;
-                  background: none;
                 }
               </style>
         page:
@@ -246,28 +162,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               <style>
                 p {
                   text-indent: 2rem;
-                }
-                p img {
-                  max-width: calc(100% - 4rem);
-                }
-              </style>
-            - | # 增加宽屏下的显示内容
-              <style>
-                .container {
-                  min-width: 66.6%;
-                  min-height: 100vh;
-                }
-                @media only print {
-                  .container {
-                    min-width: 100%;
-                  }
-                }
-              </style>
-            - |
-              <style>
-                .container.content {
-                  margin: auto;
-                  padding: 2rem;
                 }
               </style>
           plugin:
@@ -374,20 +268,19 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
         post:
           date: # 显示博文时间
             enable: true
-            prepend: <i class="fa-solid fa-calendar-day fa-fw"></i>
+            prepend: 发表于
           wordcount: # 统计全文字数
             enable: true
-            prepend: <i class="fa-solid fa-file-word fa-fw"></i>
+            prepend: 总计
             unit: 字
           readtime: # 计算文章阅读时间
             enable: true
-            prepend: <i class="fa-solid fa-clock fa-fw"></i>
+            prepend: 阅读时间
             unit: 分
             divided_by: 300 # 正常人的阅读速度大概每分钟三百个字
           copyright:
             | # 我的文章使用最宽松的知识共享协议：署名 4.0 国际 (CC BY 4.0)。您可以自由地：共享 — 在任何媒介以任何形式复制、发行本作品；演绎 — 修改、转换或以本作品为基础进行创作；在任何用途下，甚至商业目的。只要你遵守许可协议条款，许可人就无法收回你的这些权利。惟须遵守下列条件：署名 — 您必须给出适当的署名，提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改。您可以用任何合理的方式来署名，但是不得以任何方式暗示许可人为您或您的使用背书。
             <br/>
-            <i class="fab fa-creative-commons-by fa-fw"></i>
             <a
               href="https://creativecommons.org/licenses/by/4.0/deed.zh"
               rel="license">
@@ -395,7 +288,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             </a>
             （除特别声明或转载文章外）
             <br/>
-            <i class="fa-solid fa-coffee fa-fw"></i>
             <a href="/merger/">如果这篇博客帮助到你，可以请我喝一杯咖啡~</a>
         merger: # 打赏页，需要配置！
           append_to_head:
