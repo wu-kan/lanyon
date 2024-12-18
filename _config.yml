@@ -299,7 +299,13 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # 来自lanyon的页面样式，不要改
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@v1.1.0/public/css/lanyon.min.css,gh/poole/lanyon@v1.1.0/public/css/syntax.min.css"
+                href="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/css/lanyon.min.css"
+              />
+              <link
+                rel="preload"
+                href="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/css/syntax.min.css"
+                as="style"
+                onload="this.rel='stylesheet'"
               />
             - | # 来自primer/css的页面样式，不要改
               <link
@@ -329,8 +335,8 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 :root {
                   --fontStack-monospace: "Monaspace Xenon", "极影毁片文宋 Medium", "Courier New", "Courier", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
                 }
-                .reveal, .markdown-body, .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
-                  font-family: var(--fontStack-monospace) !important;
+                .markdown-body, .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
+                  font-family: var(--fontStack-monospace);
                 }
               </style>
             - | # 侧边栏放缩修正
@@ -585,27 +591,27 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               value: <!-- .slide -->
             - key: data-separator-vertical # 垂直展示页分隔符
               value: <!-- .slide vertical=true -->
-            - key: data-background-color
-              value: "White"
           prepend: |
-            <link
-              rel="stylesheet"
-              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.1.0/dist/reveal.min.css,npm/reveal.js@5.1.0/dist/theme/sky.min.css"
-            />
             <style>
-              .sidebar {
-                line-height: 1.5;
+              :root {
+                --r-main-font: var(--fontStack-monospace) !important;
+                --r-heading-font: var(--fontStack-monospace) !important;
+                --r-code-font: var(--fontStack-monospace) !important;
+                --r-main-color: var(--fgColor-default, var(--color-fg-default)) !important;
+                --r-heading-color: var(--fgColor-default, var(--color-fg-default)) !important;
+                --r-background-color: var(--bgColor-default, var(--color-canvas-default)) !important;
               }
               .reveal .slides {
                 text-align: left;
               }
-              .reveal a,
-              .reveal a:hover,
-              .reveal a:focus {
-                color: inherit;
-                border-bottom: 1px solid var(--theme-base-color);
+              .sidebar {
+                line-height: 1.5;
               }
             </style>
+            <link
+              rel="stylesheet"
+              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.1.0/dist/reveal.min.css,npm/reveal.js@5.1.0/dist/theme/serif.min.css"
+            />
           append: |
             <script
               src="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.1.0/dist/reveal.min.js,npm/reveal.js@5.1.0/plugin/markdown/markdown.min.js,npm/reveal.js@5.1.0/plugin/math/math.min.js,npm/reveald3@2.0.0/reveald3.min.js,npm/reveal.js-mermaid-plugin@2.3.0/plugin/mermaid/mermaid.min.js"
