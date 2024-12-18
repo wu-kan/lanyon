@@ -125,7 +125,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - |
               <link
                 rel="preload"
-                href="https://cdn.jsdelivr.net/gh/mzlogin/rouge-themes@master/dist/github.min.css"
+                href="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/css/syntax.min.css"
                 as="style"
                 onload="this.rel='stylesheet'"
               />
@@ -366,7 +366,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             <script
               src="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.1.0/dist/reveal.min.js,npm/reveal.js@5.1.0/plugin/markdown/markdown.min.js,npm/reveal.js@5.1.0/plugin/math/math.min.js,npm/reveald3@2.0.0/reveald3.min.js,npm/reveal.js-mermaid-plugin@2.3.0/plugin/mermaid/mermaid.min.js"
               onload="
-              for(let x of document.getElementsByClassName('slides-wrapper'))
+              for(let x of document.getElementsByClassName('wrap'))
                 x.classList.add('reveal');
               Reveal.initialize({
                 scrollActivationWidth: null,
