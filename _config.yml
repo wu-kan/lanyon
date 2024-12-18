@@ -138,10 +138,9 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
               <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-xenon@5.1.0/index.min.css" />
               <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/jyhpws/dist/%E6%9E%81%E5%BD%B1%E6%AF%81%E7%89%87%E6%96%87%E5%AE%8B/result.css' />
-              <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/maple-mono-cn/dist/MapleMono-CN-Regular/result.css' />
               <style>
                 :root {
-                  --fontStack-monospace: 'Maple Mono CN', "Monaspace Xenon", "极影毁片文宋 Medium", "Courier New", "Courier", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
+                  --fontStack-monospace: "Monaspace Xenon", "极影毁片文宋 Medium", "Courier New", "Courier", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
                 }
                 .markdown-body {
                   font-family: var(--fontStack-monospace);
@@ -162,6 +161,14 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               <style>
                 p {
                   text-indent: 2rem;
+                }
+              </style>
+            - |
+              <style>
+              .markdown-body .highlight pre,
+              .markdown-body pre {
+                  padding: 0;
+                  background: none;
                 }
               </style>
           plugin:
@@ -289,6 +296,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             （除特别声明或转载文章外）
             <br/>
             <a href="/merger/">如果这篇博客帮助到你，可以请我喝一杯咖啡~</a>
+            <br/>
         merger: # 打赏页，需要配置！
           append_to_head:
             - | # 需要配置的变量见<https://merger.justhx.com/cn/docs/configure>
@@ -387,7 +395,7 @@ plugins: # <https://jekyllrb.com/docs/plugins/>
   - jekyll-redirect-from # 站点页面重定向
   - jekyll-remote-theme # 使用remote_theme插件实现主题的前后分离，详见<https://github.com/benbalter/jekyll-remote-theme/>
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@5.0.0-alpha #使用固定版本号以防止主题更新导致站点显示错乱
+remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@5.0.0 #使用固定版本号以防止主题更新导致站点显示错乱
 
 readme_index: # 缺失index.md和index.html时，使用README.md代替之
   with_frontmatter: true # 支持带有yaml头的README
