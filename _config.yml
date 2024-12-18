@@ -134,11 +134,11 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               />
               <link
                 rel='stylesheet'
-                href='https://chinese-fonts-cdn.deno.dev/packages/hwmct/dist/%E6%B1%87%E6%96%87%E6%98%8E%E6%9C%9D%E4%BD%93/result.css'
+                href='https://chinese-fonts-cdn.deno.dev/packages/jyhpws/dist/%E6%9E%81%E5%BD%B1%E6%AF%81%E7%89%87%E6%96%87%E5%AE%8B/result.css'
               />
               <style>
                 :root {
-                  --fontStack-monospace: "Monaspace Xenon", "Huiwen-mincho", "Courier New", "Courier", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
+                  --fontStack-monospace: "Monaspace Xenon", "极影毁片文宋 Medium", "Courier New", "Courier", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
                 }
                 .markdown-body {
                   font-family: var(--fontStack-monospace);
@@ -159,13 +159,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               <style>
                 .page {
                   min-height: 100vh;
-                }
-              </style>
-            - | # 选中字体颜色
-              <style>
-                ::selection {
-                  color: White;
-                  background: Black;
                 }
               </style>
             - | # 首行缩进2字符
