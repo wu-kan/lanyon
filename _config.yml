@@ -127,6 +127,23 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 rel="stylesheet"
                 href="https://cdn.jsdelivr.net/npm/@primer/css@21.5.1/dist/primer.min.css"
               />
+            - |
+              <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-xenon@5.1.0/index.min.css"
+              />
+              <link
+                rel='stylesheet'
+                href='https://chinese-fonts-cdn.deno.dev/packages/jyhpws/dist/%E6%9E%81%E5%BD%B1%E6%AF%81%E7%89%87%E6%96%87%E5%AE%8B/result.css'
+              />
+              <style>
+                :root {
+                  --fontStack-monospace: "Monaspace Xenon", "极影毁片文宋 Medium", "Courier New", "Courier", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
+                }
+                .markdown-body {
+                  font-family: var(--fontStack-monospace);
+                }
+              </style>
             - | # 代码块高亮，异步加载，防止 GitHub 阻塞页面加载
               <link
                 rel="preload"
@@ -333,6 +350,9 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             />
             <style>
               .reveal {
+                --r-main-font: var(--fontStack-monospace);
+                --r-heading-font: var(--fontStack-monospace);
+                --r-code-font: var(--fontStack-monospace);
                 --r-main-color: var(--fgColor-default, var(--color-fg-default));
                 --r-heading-color: var(--fgColor-default, var(--color-fg-default));
                 --r-link-color: var(--fgColor-accent, var(--color-accent-fg));
