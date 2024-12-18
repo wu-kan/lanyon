@@ -1,6 +1,5 @@
 title: 星合の空 # 站点标题
-description: | # 头像背后的信息（html格式），<br/>代表换行
-  Kan Wu's Personal Blog
+description: Kan Wu's Personal Blog
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
 defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/front-matter-defaults/>功能进行配置
@@ -42,15 +41,15 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 href: https://www.zhihu.com/people/wukan0621
               - title: 'ORCID'
                 href: https://orcid.org/0009-0008-5828-847X
-              - title: Google Scholar
+              - title: 'Google Scholar'
                 href: https://scholar.google.com/citations?user=aU9P37UAAAAJ
-              - title: Vjudge
+              - title: 'Vjudge'
                 href: https://vjudge.net/user/WuK
-              - title: jekyll-theme-WuK
-                href: https://jekyll-theme-WuK.wu-kan.cn
+              - title: 'jekyll-theme-WuK'
+                href: https://jekyll-theme-WuK.wu-kan.cn/
             footer: |
               <div>
-                ©2017-2024 WuK
+                © 2017-2024 WuK
               </div>              
           append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
             - | # 页面加载动画，可在 <https://css-loaders.com/> 挑选
@@ -126,7 +125,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - |
               <link
                 rel="preload"
-                href="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/css/syntax.min.css"
+                href="https://cdn.jsdelivr.net/gh/mzlogin/rouge-themes@master/dist/github.min.css"
                 as="style"
                 onload="this.rel='stylesheet'"
               />
@@ -150,6 +149,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           title: # 为每个页面自动生成一个 H1 title
             enable: true
           prepend:
+            - | # 填满页面
+              <style>
+                .page {
+                  min-height: 100vh;
+                }
+              </style>
             - | # 选中字体颜色
               <style>
                 ::selection {
@@ -179,7 +184,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 | # 对KaTeX过长公式渲染超出页面的修正，感谢[@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/13)
                 <link
                   rel="stylesheet"
-                  href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+                  href="https://cdn.jsdelivr.net/npm/katex@0.16.17/dist/katex.min.css"
                 />
                 <style>
                   .katex-display>.katex {
@@ -187,7 +192,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/combine/npm/katex@0.16.11/dist/katex.min.js,npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+                  src="https://cdn.jsdelivr.net/combine/npm/katex@0.16.17/dist/katex.min.js,npm/katex@0.16.17/dist/contrib/auto-render.min.js"
                   async="async"
                   onload='renderMathInElement(document.body, { delimiters: [{left: "$$", right: "$$", display: true}, { left: "$", right: "$", display: false }, {left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}]})'
                 ></script>
@@ -234,7 +239,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/npm/mermaid@11.3.0/dist/mermaid.min.js"
+                  src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"
                   async="async"
                   onload='
                     for(let x of document.getElementsByClassName("language-mermaid"))
@@ -296,7 +301,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             （除特别声明或转载文章外）
             <br/>
             <a href="/merger/">如果这篇博客帮助到你，可以请我喝一杯咖啡~</a>
-            <br/>
+            <hr/>
         merger: # 打赏页，需要配置！
           append_to_head:
             - | # 需要配置的变量见<https://merger.justhx.com/cn/docs/configure>
@@ -356,15 +361,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               .reveal .slides {
                 text-align: left;
               }
-              .sidebar {
-                line-height: 1.5;
-              }
             </style>
           append: |
             <script
               src="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.1.0/dist/reveal.min.js,npm/reveal.js@5.1.0/plugin/markdown/markdown.min.js,npm/reveal.js@5.1.0/plugin/math/math.min.js,npm/reveald3@2.0.0/reveald3.min.js,npm/reveal.js-mermaid-plugin@2.3.0/plugin/mermaid/mermaid.min.js"
               onload="
-              for(let x of document.getElementsByClassName('wrap'))
+              for(let x of document.getElementsByClassName('slides-wrapper'))
                 x.classList.add('reveal');
               Reveal.initialize({
                 scrollActivationWidth: null,
@@ -417,7 +419,7 @@ kramdown: # 见<https://kramdown.gettalong.org/options.html>
   syntax_highlighter_opts: # 可见<https://kramdown.gettalong.org/syntax_highlighter/rouge.html>
     block:
       disable: false
-      line_numbers: true #渲染出来的效果好鬼畜
+      line_numbers: true
     span:
       disable: false
 
