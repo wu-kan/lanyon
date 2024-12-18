@@ -50,175 +50,44 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             layout-reverse: true # 开启后sidebar在右边，反之左边
             sidebar-overlay: true # 开启后正文不随sidebar移动而移动
           html_lang: zh # <https://www.w3school.com.cn/tags/html_ref_language_codes.asp>
-          sidebar: # 此配置项下是一些关于侧边栏的配置
-            disable: false # 是否不显示sidebar
-            avatar: # 侧边栏显示的头像
-              enable: true
-              img: https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=320 # 头像的地址
+          menu:
             nav: # 导航部分的内容，你也可以自己增加文字、图标（来自fontawesome）和对应的链接
-              - title: '<i class="fa-solid fa-home fa-fw"></i> 首页'
+              - title: '首页 / Index'
                 href: /
-              - title: '<i class="fa-solid fa-comment fa-fw"></i> 留言'
+              - title: '留言 / Comments'
                 href: /comments/
-              - title: '<i class="fa-solid fa-archive fa-fw"></i> 归档'
+              - title: '归档 / Archive'
                 href: /archive/
-              - title: '<i class="fa-solid fa-tags fa-fw"></i> 标签'
+              - title: '标签 / Tags'
                 href: /tags/
-              - title: '<i class="fa-solid fa-coffee fa-fw"></i> 打赏'
+              - title: '打赏 / Sponsor'
                 href: /merger/
-            simple_jekyll_search: # 侧边栏的全站搜索
-              enable: true
-              full_text_search: false # 可能导致缓慢的搜索和加载
-              append: | # 如果看不懂就不改
-                <style>
-                  #sidebar-search-input {
-                    background: none;
-                    border: none;
-                    color: White;
-                    width: 100%;
-                  }
-                  #sidebar-search-results-container {
-                    overflow: hidden hidden;
-                    max-height: 66.6vh;
-                  }
-                  #sidebar-search-results-container:hover {
-                    overflow: auto auto;
-                  }
-                </style>
-                <input
-                  id="sidebar-search-input"
-                  placeholder="搜索博文"
-                />
-                <ol
-                  id="sidebar-search-results-container"
-                ></ol>
-                <script
-                  src='https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.9.1'
-                  async='async'
-                  onload='
-                    SimpleJekyllSearch({
-                      json: "/assets/simple-jekyll-search/search.json",
-                      searchInput: document.getElementById("sidebar-search-input"),
-                      resultsContainer: document.getElementById("sidebar-search-results-container"),
-                      searchResultTemplate: `<li><a href="{url}">{title}</a></li>`,
-                      limit: 99,
-                      fuzzy: true
-                    })'
-                ></script>
-            jekyll-toc: # 侧边栏的目录插件，https://github.com/allejo/jekyll-toc
-              enable: true
-              prepend: | # 目录过长时自动折叠
-                <style>
-                  #toc {
-                    overflow: hidden hidden;
-                    max-height: 66.6vh;
-                  }
-                  #toc:hover{
-                    overflow: auto auto;
-                  }
-                </style>
-            prepend_to_sidebar:
-              #- <script defer="defer" src="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/js/script.min.js"></script> # 点击空白处而非按钮从而关闭侧边栏的插件，可选
-              - | # 侧边栏使用主题色
-                <style>
-                  #sidebar-checkbox:checked ~ .sidebar-toggle,
-                  .sidebar,
-                  .sidebar-toggle:active {
-                    background-color: var(--theme-base-color);
-                  }
-                </style>
-              - | # 修复点击侧边栏按钮回到顶部的问题
-                <style>
-                  .sidebar-checkbox {
-                    display: none;
-                  }
-                  .sidebar-toggle {
-                    position: fixed;
-                    background: none;
-                  }
-                </style>
-              - | # 修复侧边栏特定情况下抖动的问题，感谢 [@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/11)
-                <style>
-                  .sidebar {
-                    overflow: hidden;
-                    min-height: 101%;
-                  }
-                  .sidebar:hover{
-                    overflow-y: scroll; 
-                  }
-                </style>
-              - | # 侧边栏头像效果
-                <style>
-                  .effect {
-                    margin: 1rem;
-                    perspective: 900px;
-                  }
-                  .effect-info {
-                    text-align: center;
-                    position: absolute;
-                    top: 0;
-                    width: 100%;
-                    transform-style: preserve-3d;
-                  }
-                  .effect-img {
-                    z-index: 11;
-                    width: 100%;
-                    height: 100%;
-                    position: relative;
-                    transition: all 0.5s ease-in-out;
-                  }
-                  .effect-img:before {
-                    position: absolute;
-                    display: block;
-                  }
-                  .effect-right_to_left .effect-img {
-                    transform-origin: 0% 50%;
-                  }
-                  .effect-right_to_left:hover .effect-img {
-                    transform: rotate3d(0, 1, 0, -180deg);
-                  }
-                </style>
-            append_to_sidebar:
-              - | # 不蒜子页面统计，看不懂可不改
-                <div>
-                  <div>
-                    <i class="fa-solid fa-eye fa-fw"></i>
-                    <span id="busuanzi_value_page_pv">
-                      <i class="fa-solid fa-spinner fa-pulse"></i>
-                    </span>
-                    <br/>
-                    <i class="fa-solid fa-paw fa-fw"></i>
-                    <span id="busuanzi_value_site_pv">
-                      <i class="fa-solid fa-spinner fa-pulse"></i>
-                    </span>
-                    <br/>
-                    <i class="fa-solid fa-user-friends fa-fw"></i>
-                    <span id="busuanzi_value_site_uv">
-                      <i class="fa-solid fa-spinner fa-pulse"></i>
-                    </span>
-                  </div>
-                  <script
-                    src="https://cdn.jsdelivr.net/npm/busuanzi@2.3/bsz.pure.mini.js"
-                    async="async"
-                  ></script>
-                </div>
-              - | # 觉得我的主题好用的话，让更多的人知道它吧！
-                <div>
-                  <i class="fa-solid fa-thumbs-up fa-fw"></i>
-                  <a href="https://jekyll-theme-WuK.wu-kan.cn">
-                    jekyll-theme-WuK
-                  </a>
-                </div>
-              - | # Copyright声明
-                <div>
-                  <i class="fa-solid fa-copyright fa-fw"></i>
-                  2017-2024 WuK
-                </div>
-            wordcount: # 全站字数统计
-              enable: false # 本地调试时建议关闭，非常影响站点生成速度（所需时间与博文数量的平方成正比）
-              prepend: <i class="fa-solid fa-user-edit fa-fw"></i>
-              kilo: 千
-              unit: 字
+              - title: '简历 / Resume'
+                href: https://resume.wu-kan.cn/
+              - title: 'GitHub'
+                href: https://github.com/wu-kan
+              - title: 'Bilibili'
+                href: https://space.bilibili.com/166390020
+              - title: 'Zhihu'
+                href: https://www.zhihu.com/people/wukan0621
+              - title: 'ORCID'
+                href: https://orcid.org/0009-0008-5828-847X
+              - title: Google Scholar
+                href: https://scholar.google.com/citations?user=aU9P37UAAAAJ
+              - title: Vjudge
+                href: https://vjudge.net/user/WuK
+            footer: |
+              <div>
+                <i class="fa-solid fa-thumbs-up fa-fw"></i>
+                <a href="https://jekyll-theme-WuK.wu-kan.cn">
+                  jekyll-theme-WuK
+                </a>
+              </div>
+              <br/>
+              <div>
+                <i class="fa-solid fa-copyright fa-fw"></i>
+                2017-2024 WuK
+              </div>              
           append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
             - | # 自定义主题色（水野爱蓝），可对应 <https://www.runoob.com/cssref/css-colornames.html> 挑选
               <style>
@@ -296,11 +165,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 icon"
                 href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=32"
               />
-            - | # 来自lanyon的页面样式，不要改
-              <link
-                rel="stylesheet"
-                href="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/css/lanyon.min.css"
-              />
+            - |
               <link
                 rel="preload"
                 href="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/css/syntax.min.css"
@@ -337,24 +202,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
                 .markdown-body, .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
                   font-family: var(--fontStack-monospace);
-                }
-              </style>
-            - | # 侧边栏放缩修正
-              <style>
-                .wrap {
-                  transition-property: width,background-size,transform;
-                  transition-duration: .3s;
-                  transition-timing-function: ease-in-out;
-                  display: inline-block;
-                }
-                @media screen and (min-width: 28rem) {
-                  .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
-                    width: calc(100% - 14rem);
-                    transform: translateX(14rem);
-                  }
-                  .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
-                    transform: translateX(0);
-                  }
                 }
               </style>
             - | # 自定义滚动条，仅对Chrome系浏览器生效
@@ -648,7 +495,7 @@ plugins: # <https://jekyllrb.com/docs/plugins/>
   - jekyll-redirect-from # 站点页面重定向
   - jekyll-remote-theme # 使用remote_theme插件实现主题的前后分离，详见<https://github.com/benbalter/jekyll-remote-theme/>
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@4.4.0 #使用固定版本号以防止主题更新导致站点显示错乱
+remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@5.0.0-alpha #使用固定版本号以防止主题更新导致站点显示错乱
 
 readme_index: # 缺失index.md和index.html时，使用README.md代替之
   with_frontmatter: true # 支持带有yaml头的README
