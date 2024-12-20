@@ -10,7 +10,7 @@ layout: home
 
 <!-- .slide vertical=true -->
 
-- xianweiz 示意敌人已不见踪影
+- 示意敌人已不见踪影
 
 ![xianweiz_angry](https://Mizuno-Ai.wu-kan.cn/assets/image/2024/12/19/0.png)
 
@@ -35,13 +35,13 @@ layout: home
 
 - 两个 weak accept，两个 weak reject
 
-![rating](https://Mizuno-Ai.wu-kan.cn/assets/image/2024/12/19/3.jpg)
+![rating](https://Mizuno-Ai.wu-kan.cn/assets/image/2024/12/19/2.jpg)
 
 <!-- .slide vertical=true -->
 
 - 经典 **the paper could be improved**
 
-![the_paper_could_be_improved](https://Mizuno-Ai.wu-kan.cn/assets/image/2024/12/19/4.jpg)
+![the_paper_could_be_improved](https://Mizuno-Ai.wu-kan.cn/assets/image/2024/12/19/3.jpg)
 
 <!-- .slide vertical=true -->
 
