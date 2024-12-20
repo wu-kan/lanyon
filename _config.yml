@@ -51,28 +51,28 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             prepend:
               - |
                 <form class="SelectMenu-filter">
-                <input
-                  class="SelectMenu-input form-control"
-                  type="text"
-                  placeholder="Search"
-                  aria-label="Filter"
-                  id="sidebar-search-input"
-                />
-                <ol class="px-5" id="sidebar-search-results-container"></ol>
-                <script
-                  src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.9.1"
-                  async="async"
-                  onload='
-                SimpleJekyllSearch({
-                  json: "/assets/simple-jekyll-search/search.json",
-                  searchInput: document.getElementById("sidebar-search-input"),
-                  resultsContainer: document.getElementById("sidebar-search-results-container"),
-                  searchResultTemplate: `<li><a href="{url}">{title}</a></li>`,
-                  limit: 9,
-                  fuzzy: true
-                })'
-                ></script>
-              </form>
+                  <input
+                    class="SelectMenu-input form-control"
+                    type="text"
+                    placeholder="Search"
+                    aria-label="Filter"
+                    id="sidebar-search-input"
+                  />
+                  <ol class="px-5" id="sidebar-search-results-container"></ol>
+                  <script
+                    src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.9.1"
+                    async="async"
+                    onload='
+                  SimpleJekyllSearch({
+                    json: "/assets/simple-jekyll-search/search.json",
+                    searchInput: document.getElementById("sidebar-search-input"),
+                    resultsContainer: document.getElementById("sidebar-search-results-container"),
+                    searchResultTemplate: `<li><a href="{url}">{title}</a></li>`,
+                    limit: 9,
+                    fuzzy: true
+                  })'
+                  ></script>
+                </form>
             footer: |
               <div>
                 © 2017-2024 wu-kan
