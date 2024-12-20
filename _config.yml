@@ -76,7 +76,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             footer: |
               <div>
                 © 2017-2024 wu-kan
-              </div>              
+              </div>
           append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
             - | # 页面加载动画，可在 <https://css-loaders.com/> 挑选
               <style>
@@ -106,7 +106,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 width: 30px;
                 height: 25px;
                 --c:no-repeat radial-gradient(farthest-side,currentColor 92%,#0000);
-                background: 
+                background:
                   var(--c) left /70% 70%,
                   var(--c) right/20% 20%,
                   var(--c) top    0 right 15%/20% 20%,
@@ -153,7 +153,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 rel="stylesheet"
                 href="https://cdn.jsdelivr.net/npm/@primer/css@21.5.1/dist/primer.min.css"
               />
-            - |
+            - | # 字体
               <link
                 rel="stylesheet"
                 href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-xenon@5.1.0/index.min.css"
@@ -164,9 +164,9 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               />
               <style>
                 :root {
-                  --fontStack-monospace: "Monaspace Xenon", "极影毁片文宋 Medium", "Courier New", "Courier", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
+                  --fontStack-monospace: "Monaspace Xenon", "极影毁片文宋 Medium", "Courier New", Courier, ui-monospace, monospace;
                 }
-                body {
+                body, .markdown-body {
                   font-family: var(--fontStack-monospace);
                 }
               </style>
