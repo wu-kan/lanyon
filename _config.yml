@@ -54,6 +54,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               </div>
             jekyll-toc: # <https://github.com/allejo/jekyll-toc>
               enable: true
+              prepend: |
+                <style>
+                  #toc {
+                    padding-left: 2em;
+                  }
+                </style>
             prepend:
               - |
                 <form class="SelectMenu-filter">
