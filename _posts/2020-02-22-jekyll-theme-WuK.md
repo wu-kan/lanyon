@@ -10,6 +10,4 @@ jekyll-theme-WuK:
         value: <!-- .slide -->
       - key: data-separator-vertical # 垂直展示页分隔符
         value: <!-- .slide vertical=true -->
-      - key: data-background-color
-        value: "White"
 ---
