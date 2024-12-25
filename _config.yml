@@ -396,7 +396,7 @@ compress_html: # <https://github.com/penibelst/jekyll-compress-html>
   comments: [] # 注释不能压缩，否则 reveal.js 的 ppt切屏受影响
   endings: all
   ignore:
-    envs: [] # set to 'all' to close
+    envs: all # set to '[]' to but something wrong with syntax_highlighter_opts line_numbers true
   blanklines: false
   profile: false
   startings: []
