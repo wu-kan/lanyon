@@ -72,8 +72,8 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               enable: true
               prepend: |
                 <style>
-                  #toc {
-                    padding-left: 2em;
+                  #wrap-toc {
+                    padding-left: 3em;
                   }
                 </style>
             prepend:
