@@ -17,6 +17,22 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               crossorigin="anonymous"
               async="async"
             ></script>
+        merger: # 打赏页，需要配置！
+          append_to_head:
+            - | # 需要配置的变量见<https://github.com/qr-merger/merger>
+              <script>
+                var myname = "WuK";
+                var profile = "i@wu-kan.cn";
+                var usage = "payment";
+                var wechat = "wxp://f2f0BhUoIC_9gex7-tC2PRvVuoA486mK5WyC";
+                var alipay = "https://qr.alipay.com/fkx02750b5kbplxvudqrx16";
+                var paypal = "https://paypal.me/wukan0621";
+                var multilingual = false;
+                var branding = false;
+                var title = "选择你的支付方式";
+                var subtitle = "跟随进一步的指示以向" + myname + "付款";
+                var gravatar_url = "https://gravatar.loli.net/avatar/";
+              </script>
         default:
           html_lang: zh # <https://www.w3school.com.cn/tags/html_ref_language_codes.asp>
           color-mode: auto # <https://primer.style/css/storybook/?path=/docs/support-theming--docs>
@@ -68,17 +84,17 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     type="text"
                     placeholder="Search"
                     aria-label="Filter"
-                    id="sidebar-search-input"
+                    id="wrap-search-input"
                   />
-                  <ol class="px-5" id="sidebar-search-results-container"></ol>
+                  <ol class="px-5" id="wrap-search-result"></ol>
                   <script
                     src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.9.1"
                     async="async"
                     onload='
                   SimpleJekyllSearch({
                     json: "/assets/simple-jekyll-search/search.json",
-                    searchInput: document.getElementById("sidebar-search-input"),
-                    resultsContainer: document.getElementById("sidebar-search-results-container"),
+                    searchInput: document.getElementById("wrap-search-input"),
+                    resultsContainer: document.getElementById("wrap-search-result"),
                     searchResultTemplate: `<li><a href="{url}">{title}</a></li>`,
                     limit: 9,
                     fuzzy: true
@@ -88,7 +104,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
             - | # 页面加载动画，可在 <https://css-loaders.com/> 挑选
               <style>
-                .loader-wrapper {
+                #wrap-loader {
                   width: 100%;
                   height: 100%;
                   position: fixed;
@@ -126,9 +142,8 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               </style>
               <script>
                 document.addEventListener("DOMContentLoaded", (event) => {
-                  for(let x of document.getElementsByClassName("loader-wrapper")) {
-                    x.remove();
-                  }
+                  let x = document.getElementById("wrap-loader");
+                  x.remove();
               });
               </script>
             - | # 一些页面优化标签，看不懂可跳过
@@ -192,14 +207,14 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           prepend:
             - | # 填满页面
               <style>
-                .page {
+                #wrap-content {
                   min-height: 100vh;
                 }
               </style>
             - | # 首行缩进2字符
               <style>
                 p {
-                  text-indent: 2rem;
+                  text-indent: 2em;
                 }
               </style>
             - |
@@ -218,7 +233,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 | # 对KaTeX过长公式渲染超出页面的修正，感谢[@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/13)
                 <link
                   rel="stylesheet"
-                  href="https://cdn.jsdelivr.net/npm/katex@0.16.17/dist/katex.min.css"
+                  href="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css"
                 />
                 <style>
                   .katex-display>.katex {
@@ -226,7 +241,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/combine/npm/katex@0.16.17/dist/katex.min.js,npm/katex@0.16.17/dist/contrib/auto-render.min.js"
+                  src="https://cdn.jsdelivr.net/combine/npm/katex@0.16.18/dist/katex.min.js,npm/katex@0.16.18/dist/contrib/auto-render.min.js"
                   async="async"
                   onload='renderMathInElement(document.body, { delimiters: [{left: "$$", right: "$$", display: true}, { left: "$", right: "$", display: false }, {left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}]})'
                 ></script>
@@ -241,7 +256,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/combine/npm/vega@5.30.0,npm/vega-lite@5.21.0,npm/vega-embed@6.26.0"
+                  src="https://cdn.jsdelivr.net/combine/npm/vega@5.30.0,npm/vega-lite@5.23.0,npm/vega-embed@6.29.0"
                   async="async"
                   onload='
                     for(let x of document.getElementsByClassName("language-vega-lite"))
@@ -274,7 +289,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 </style>
                 <script
                   src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"
-                  async="async"
+                  defer="defer"
                   onload='
                     for(let x of document.getElementsByClassName("language-mermaid"))
                       if(x.nodeName=="CODE")
@@ -335,41 +350,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             （除特别声明或转载文章外）
             <br/>
             <a href="/merger/">如果这篇博客帮助到你，可以请我喝一杯咖啡~</a>
-            <hr/>
-        merger: # 打赏页，需要配置！
-          append_to_head:
-            - | # 需要配置的变量见<https://merger.justhx.com/cn/docs/configure>
-              <script>
-                var myname = "WuK";
-                var profile = "i@wu-kan.cn";
-                var usage = "payment";
-                var wechat = "wxp://f2f0BhUoIC_9gex7-tC2PRvVuoA486mK5WyC";
-                var tenpay = "https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=CAEQ77zFwQMY-6u57gU%3D_xxx_sign&u=942759535&n=%E8%94%9A";
-                var alipay = "https://qr.alipay.com/fkx02750b5kbplxvudqrx16";
-                var paypal = "https://paypal.me/wukan0621";
-                var multilingual = false;
-                var branding = false;
-                var title = "选择你的支付方式";
-                var subtitle = "跟随进一步的指示以向" + myname + "付款";
-                var qrcodeapi = "https://www.zhihu.com/qrcode?url=";
-                var gravatar_url = "https://gravatar.loli.net/avatar/";
-              </script>
-            - |
-              <meta
-                charset="utf-8"
-              />
-              <meta
-                name="viewport"
-                content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-              />
-              <meta
-                http-equiv="Content-Security-Policy"
-                content="upgrade-insecure-requests"
-              />
-            - | # merger的页面样式
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.26.1/assets/styles/spectre.css/spectre-modified.min.css,gh/hifocus/merger@0.26.1/assets/styles/style.min.css">
-              <script defer="defer" src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1"></script>
-              <script defer="defer" src="https://cdn.jsdelivr.net/combine/gh/lrsjng/jquery-qrcode@0.18.0/dist/jquery-qrcode.min.js,npm/blueimp-md5@2.18.0/js/md5.min.js,gh/hifocus/merger@0.26.1/assets/js/function.min.js,gh/hifocus/merger@0.26.1/assets/js/font_974919_xgtacm93vxp.min.js"></script>
         home: # 展示页的配置可跳过，详见<https://revealjs.com/>
           append_to_section_tag:
             - key: data-markdown
@@ -398,16 +378,16 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             </style>
           append: |
             <script
-              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.1.0/dist/reveal.min.js,npm/reveal.js@5.1.0/plugin/markdown/markdown.min.js,npm/reveal.js@5.1.0/plugin/math/math.min.js,npm/reveald3@2.0.0/reveald3.min.js,npm/reveal.js-mermaid-plugin@2.3.0/plugin/mermaid/mermaid.min.js"
+              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.1.0/dist/reveal.min.js,npm/reveal.js@5.1.0/plugin/markdown/markdown.min.js,npm/reveal.js@5.1.0/plugin/math/math.min.js"
               onload="
-              for(let x of document.getElementsByClassName('wrap'))
-                x.classList.add('reveal');
+              let x = document.getElementsByClassName('wrap-content');
+              x.classList.add('reveal');
               Reveal.initialize({
                 scrollActivationWidth: null,
                 height: '100%',
                 mouseWheel: true,
                 navigationMode: 'linear',
-                plugins: [ RevealMarkdown,RevealMath.KaTeX,Reveald3,RevealMermaid ]
+                plugins: [ RevealMarkdown,RevealMath.KaTeX ]
               });
             "></script>
 
@@ -416,7 +396,7 @@ compress_html: # <https://github.com/penibelst/jekyll-compress-html>
   comments: [] # 注释不能压缩，否则 reveal.js 的 ppt切屏受影响
   endings: all
   ignore:
-    envs: all # 暂时关掉页面压缩
+    envs: [] # set to 'all' to close
   blanklines: false
   profile: false
   startings: []
@@ -431,7 +411,7 @@ plugins: # <https://jekyllrb.com/docs/plugins/>
   - jekyll-redirect-from # 站点页面重定向
   - jekyll-remote-theme # 使用remote_theme插件实现主题的前后分离，详见<https://github.com/benbalter/jekyll-remote-theme/>
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@5.1.0 #使用固定版本号以防止主题更新导致站点显示错乱
+remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@5.2.0 #使用固定版本号以防止主题更新导致站点显示错乱
 
 readme_index: # 缺失index.md和index.html时，使用README.md代替之
   with_frontmatter: true # 支持带有yaml头的README
