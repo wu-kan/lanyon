@@ -21,16 +21,17 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append_to_head:
             - | # 需要配置的变量见<https://github.com/qr-merger/merger>
               <script>
-                var myname = "WuK";
+                var multilingual = true;
+                var myname = "Kan Wu";
+                var myname_hans = myname;
+                var myname_hant = myname;
+                var myname_eng = myname;
                 var profile = "i@wu-kan.cn";
-                var usage = "payment";
+                var usage = "donate";
                 var wechat = "wxp://f2f0BhUoIC_9gex7-tC2PRvVuoA486mK5WyC";
                 var alipay = "https://qr.alipay.com/fkx02750b5kbplxvudqrx16";
                 var paypal = "https://paypal.me/wukan0621";
-                var multilingual = false;
                 var branding = false;
-                var title = "选择你的支付方式";
-                var subtitle = "跟随进一步的指示以向" + myname + "付款";
                 var gravatar_url = "https://gravatar.loli.net/avatar/";
               </script>
         default:
@@ -39,7 +40,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           light-theme: light
           dark-theme: dark
           menu:
-            nav: # 导航部分的内容，你也可以自己增加文字、图标（来自fontawesome）和对应的链接
+            nav: # 导航部分的内容，你也可以自己增加对应的链接
               - title: '首页 / Index'
                 href: /
               - title: '留言 / Comments'
@@ -48,7 +49,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 href: /archive/
               - title: '标签 / Tags'
                 href: /tags/
-              - title: '打赏 / Sponsor'
+              - title: '捐赠 / Donate'
                 href: /merger/
               - title: '简历 / Resume'
                 href: https://resume.wu-kan.cn/
@@ -64,9 +65,24 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 href: https://vjudge.net/user/WuK
               - title: 'jekyll-theme-WuK'
                 href: https://jekyll-theme-WuK.wu-kan.cn/
-            footer: |
+            footer: | # 页面统计
               <div>
-                © 2017-2024 wu-kan
+                Site
+                <span id="busuanzi_container_site_pv">
+                  PV
+                  <span id="busuanzi_value_site_pv"></span>
+                </span>
+                <span id="busuanzi_container_site_uv">
+                  UV
+                  <span id="busuanzi_value_site_uv"></span>
+                </span>
+                <script
+                  src="https://cdn.jsdelivr.net/npm/busuanzi@2.3/bsz.pure.mini.js"
+                  async="async"
+                ></script>
+              </div>
+              <div>
+                (C) 2017-2024 wu-kan
               </div>
             jekyll-toc: # <https://github.com/allejo/jekyll-toc>
               enable: true
@@ -201,19 +217,19 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 onload="this.rel='stylesheet'"
                 href="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/css/syntax.min.css"
               />
-        page:
-          title: # 为每个页面自动生成一个 H1 title
-            enable: true
-          prepend:
             - | # 填满页面
               <style>
                 #wrap-content {
                   min-height: 100vh;
                 }
               </style>
+        page:
+          title: # 为每个页面自动生成一个 H1 title
+            enable: true
+          prepend:
             - | # 首行缩进2字符
               <style>
-                p {
+                .markdown-body p {
                   text-indent: 2em;
                 }
               </style>
@@ -379,8 +395,9 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append: |
             <script
               src="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.1.0/dist/reveal.min.js,npm/reveal.js@5.1.0/plugin/markdown/markdown.min.js,npm/reveal.js@5.1.0/plugin/math/math.min.js"
+              defer="defer"
               onload="
-              let x = document.getElementsByClassName('wrap-content');
+              let x = document.getElementById('wrap-content');
               x.classList.add('reveal');
               Reveal.initialize({
                 scrollActivationWidth: null,
