@@ -52,6 +52,14 @@ layout: home
 
 <!-- .slide -->
 
+## Keep Coding
+
+<!-- .slide vertical=true -->
+
+![coding](https://Mizuno-Ai.wu-kan.cn/assets/image/2024/12/19/4.png)
+
+<!-- .slide -->
+
 ## Balanced Life
 
 - 保持健身，体重 55kg -> 58kg
