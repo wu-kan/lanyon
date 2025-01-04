@@ -101,7 +101,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   />
                   <ol class="px-5" id="wrap-search-result"></ol>
                   <script
-                    src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0"
+                    src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"
                     async="async"
                     onload='
                   SimpleJekyllSearch({
