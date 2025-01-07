@@ -188,6 +188,11 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 rel="stylesheet"
                 href="https://cdn.jsdelivr.net/npm/@primer/css@21.5.1/dist/primer.min.css"
               />
+            - | # 代码高亮，可在 <https://www.npmjs.com/package/pygments-rouge-css> 挑选
+              <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/pygments-rouge-css@0.1.0/perldoc.min.css"
+              />
             - | # 字体
               <link
                 rel="stylesheet"
@@ -205,14 +210,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   font-family: var(--fontStack-monospace);
                 }
               </style>
-            - | # 代码块高亮，异步加载，防止 GitHub 阻塞页面加载
-              <link
-                rel="preload"
-                as="style"
-                async="async"
-                onload="this.rel='stylesheet'"
-                href="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/css/syntax.min.css"
-              />
             - | # 填满页面
               <style>
                 #wrap-content {
