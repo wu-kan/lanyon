@@ -9,6 +9,9 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
       jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         comments: # 留言页，请先修改这里，确保使用的是你自己的repo！参照<https://giscus.app/>
           append: |
+            <div class="giscus">
+              Loading comments...
+            </div>
             <script src="https://giscus.app/client.js"
               data-repo="wu-kan/wu-kan.github.io"
               data-repo-id="MDEwOlJlcG9zaXRvcnkxNzIxMzc1OTQ="
