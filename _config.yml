@@ -15,7 +15,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               data-category="General"
               data-category-id="DIC_kwDOCkKces4Clz9k"
               data-mapping="url"
-              data-strict="0"
+              data-strict="1"
               data-reactions-enabled="1"
               data-emit-metadata="0"
               data-input-position="top"
