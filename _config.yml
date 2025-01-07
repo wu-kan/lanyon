@@ -13,7 +13,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               repo="wu-kan/utterances-storage"
               src="https://utteranc.es/client.js"
               issue-term="url"
-              theme="github-light"
+              theme="preferred-color-scheme"
               crossorigin="anonymous"
               async="async"
             ></script>
