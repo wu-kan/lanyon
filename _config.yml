@@ -10,12 +10,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
         comments: # 留言页，请先修改这里，确保使用的是你自己的repo！参照<https://giscus.app/>
           append: |
             <script src="https://giscus.app/client.js"
-              data-repo="wu-kan/blog-comments"
-              data-repo-id="MDEwOlJlcG9zaXRvcnkzNzQ2NTcyMzQ="
+              data-repo="wu-kan/wu-kan.github.io"
+              data-repo-id="MDEwOlJlcG9zaXRvcnkxNzIxMzc1OTQ="
               data-category="Announcements"
-              data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMzMDE4NjI3"
+              data-category-id="DIC_kwDOCkKces4Clz9j"
               data-mapping="url"
-              data-strict="1"
+              data-strict="0"
               data-reactions-enabled="1"
               data-emit-metadata="0"
               data-input-position="top"
