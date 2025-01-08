@@ -201,7 +201,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 :root {
                   --fontStack-monospace: "Monaspace Xenon", "极影毁片文宋 Medium", "Courier New", Courier, ui-monospace, monospace;
                 }
-                .markdown-body {
+                body, .markdown-body {
                   font-family: var(--fontStack-monospace);
                 }
               </style>
@@ -262,7 +262,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 key: language-vega-lite
               append: |
                 <style>
-                  pre code.language-vega-lite {
+                  pre code .language-vega-lite {
                     display: none;
                   }
                 </style>
@@ -283,7 +283,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 key: language-mermaid
               append: |
                 <style>
-                  pre code.language-mermaid {
+                  pre code .language-mermaid {
                     display: none;
                   }
                 </style>
