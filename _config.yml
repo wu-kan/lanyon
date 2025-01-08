@@ -211,14 +211,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   min-height: 100vh;
                 }
               </style>
-            - | # 打印页面时隐藏菜单键
-              <style>
-                @media only print {
-                  #wrap-menu {
-                    display: none;
-                  }
-                }
-              </style>
         page:
           title: # 为每个页面自动生成一个 H1 title
             enable: true
@@ -324,7 +316,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 </script>
                 <script
                   async
-                  onload="if(window.matchMedia("print").matches==false)initSakanaWidget();"
+                  onload="initSakanaWidget();"
                   src="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.js"
                 ></script>
         post:
