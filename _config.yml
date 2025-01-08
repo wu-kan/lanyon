@@ -27,21 +27,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               crossorigin="anonymous"
               async>
             </script>
-        merger: # 打赏页，需要配置！
-          append_to_head:
-            - | # 需要配置的变量见<https://github.com/qr-merger/merger>
-              <script>
-                var myname = "Kan Wu";
-                var profile = "https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=320";
-                var usage = "donate";
-                var wechat = "wxp://f2f0BhUoIC_9gex7-tC2PRvVuoA486mK5WyC";
-                var alipay = "https://qr.alipay.com/fkx02750b5kbplxvudqrx16";
-                var paypal = "https://paypal.me/wukan0621";
-                var multilingual = false;
-                var branding = false;
-                var title = "选择你的支付方式";
-                var subtitle = "跟随进一步的指示以向" + myname + "付款";
-              </script>
         default:
           html_lang: zh # <https://www.w3school.com.cn/tags/html_ref_language_codes.asp>
           color-mode: auto # <https://primer.style/css/storybook/?path=/docs/support-theming--docs>
@@ -58,7 +43,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               - title: '标签 / Tags'
                 href: /tags/
               - title: '捐赠 / Donate'
-                href: /merger/
+                href: /donate/
               - title: '简历 / Resume'
                 href: https://resume.wu-kan.cn/
               - title: 'GitHub'
@@ -126,18 +111,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
             - | # 页面加载动画，可在 <https://css-loaders.com/> 挑选
               <style>
-                #wrap-loader {
-                  width: 100%;
-                  height: 100%;
-                  position: fixed;
-                  top: 0;
-                  left: 0;
-                  background-color: white;
-                  z-index: 999;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                }
                 .loader {
                   width: calc(6*30px);
                   height: 50px;
@@ -160,6 +133,18 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
                 @keyframes l12 {
                   100% {clip-path: inset(0 -30px 0 0)}
+                }
+                #wrap-loader {
+                  width: 100%;
+                  height: 100%;
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  background-color: white;
+                  z-index: 999;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
                 }
               </style>
               <script>
@@ -260,7 +245,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 | # 对KaTeX过长公式渲染超出页面的修正，感谢[@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/13)
                 <link
                   rel="stylesheet"
-                  href="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css"
+                  href="https://cdn.jsdelivr.net/npm/katex@0.16.19/dist/katex.min.css"
                 />
                 <style>
                   .katex-display>.katex {
@@ -268,7 +253,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/combine/npm/katex@0.16.18/dist/katex.min.js,npm/katex@0.16.18/dist/contrib/auto-render.min.js"
+                  src="https://cdn.jsdelivr.net/combine/npm/katex@0.16.19/dist/katex.min.js,npm/katex@0.16.19/dist/contrib/auto-render.min.js"
                   async="async"
                   onload='renderMathInElement(document.body, { delimiters: [{left: "$$", right: "$$", display: true}, { left: "$", right: "$", display: false }, {left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}]})'
                 ></script>
@@ -279,7 +264,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 <style>
                   pre.language-vega-lite,
                   code.language-vega-lite {
-                    display: none !important;
+                    display: none;
                   }
                 </style>
                 <script
@@ -301,21 +286,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 <style>
                   pre.language-mermaid,
                   code.language-mermaid {
-                    display: none !important;
-                  }
-                  @media only screen {
-                    .mermaid {
-                      overflow: hidden hidden;
-                      max-width: 100%;
-                      max-height: 66.6vh;
-                    }
-                    .mermaid {
-                      overflow: auto auto;
-                    }
+                    display: none;
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"
+                  src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js
+                  async="async"
                   defer="defer"
                   onload='
                     for(let x of document.getElementsByClassName("language-mermaid"))
@@ -331,16 +307,9 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 enable: false
               append: |
                 <link
-                rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.css"
+                  rel="stylesheet"
+                  href="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.css"
                 />
-                <style>
-                  @media only print {
-                    .sakana-widget {
-                      display: none;
-                    }
-                  }
-                </style>
                 <script>
                 function initSakanaWidget() {
                   const mizuno = SakanaWidget.getCharacter('takina');
@@ -357,7 +326,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 </script>
                 <script
                 async
-                onload="initSakanaWidget()"
+                onload="if(window.matchMedia("(print)").matches==false)initSakanaWidget();"
                 src="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.js"
                 ></script>
         post:
@@ -370,7 +339,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             unit: words
           readtime: # 计算文章阅读时间
             enable: true
-            prepend: need
+            prepend: require
             unit: min
             divided_by: 300 # 正常人的阅读速度大概每分钟三百个字
           copyright:
@@ -383,7 +352,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             </a>
             （除特别声明或转载文章外）
             <br/>
-            <a target="_blank" href="/merger/">如果这篇博客帮助到你，可以请我喝一杯咖啡~</a>
+            <a target="_blank" href="/donate/">如果这篇博客帮助到你，可以请我喝一杯咖啡~</a>
           related_posts:
             enable: true
         home: # 展示页的配置可跳过，详见<https://revealjs.com/>
@@ -448,7 +417,7 @@ plugins: # <https://jekyllrb.com/docs/plugins/>
   - jekyll-redirect-from # 站点页面重定向
   - jekyll-remote-theme # 使用remote_theme插件实现主题的前后分离，详见<https://github.com/benbalter/jekyll-remote-theme/>
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@5.2.0 #使用固定版本号以防止主题更新导致站点显示错乱
+remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@5.3.0 #使用固定版本号以防止主题更新导致站点显示错乱
 
 readme_index: # 缺失index.md和index.html时，使用README.md代替之
   with_frontmatter: true # 支持带有yaml头的README
