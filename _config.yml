@@ -262,7 +262,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 key: language-vega-lite
               append: |
                 <style>
-                  pre code .language-vega-lite {
+                  pre code.language-vega-lite {
                     display: none;
                   }
                 </style>
@@ -283,7 +283,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 key: language-mermaid
               append: |
                 <style>
-                  pre code .language-mermaid {
+                  pre code.language-mermaid {
                     display: none;
                   }
                 </style>
