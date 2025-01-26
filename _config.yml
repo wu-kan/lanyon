@@ -220,6 +220,9 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 .markdown-body p {
                   text-indent: 2em;
                 }
+                .markdown-body img {
+                  max-width: calc(100% - 2em);
+                }
               </style>
             - |
               <style>
